@@ -1,0 +1,27 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --lime: #c8e629;
+  --lime-dark: #6b8800;
+  --dark: #1a1a1a;
+  --light: #f2f2ec;
+  --text: #222;
+  --text-secondary: #555;
+  --muted: #777;
+}
+
+body {
+  font-family: 'Google Sans', sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 52px;
+}
