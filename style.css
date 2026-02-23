@@ -85,3 +85,81 @@ nav .inner {
   border-bottom: 2px solid var(--lime);
   padding-bottom: 2px;
 }
+
+/* ── HERO ── */
+.hero {
+  padding: 64px 0 56px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 18px;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-right h1 {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hero-right h1 .hl {
+  background: var(--lime);
+  padding: 2px 7px;
+}
+
+.hero-right .tagline {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.hero-right .desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  font-size: 14px;
+  padding: 11px 26px;
+  border-radius: 30px;
+  border: 1.5px solid #ccc;
+  text-decoration: none;
+}
