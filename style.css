@@ -163,3 +163,145 @@ nav .inner {
   border: 1.5px solid #ccc;
   text-decoration: none;
 }
+
+/* ── WHY US ── */
+.why-section {
+  background: var(--light);
+}
+
+.why-section .inner {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/* 3 equal columns, rows stretch to fill each other */
+.why-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  align-items: stretch; /* all cols same height */
+}
+
+/* heading style — underline only as wide as text */
+.why-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.why-heading-text {
+  border-bottom: 3px solid var(--dark);
+  padding-bottom: 4px;
+}
+
+/* col 1: bubbles */
+.why-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-icons-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.bubble {
+  background: var(--lime);
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 22px;
+  white-space: nowrap;
+}
+
+.avatar-icons {
+  display: flex;
+}
+
+.avatar-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--lime);
+  margin-left: -8px;
+}
+
+.avatar-icon:first-child {
+  margin-left: 0;
+}
+
+.why-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-logo-float {
+  width: 52px;
+  height: 52px;
+  background: var(--lime);
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.why-logo-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* col 2: offerings — green bar stretches via flex */
+.why-offerings {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-list-wrap {
+  display: flex;
+  flex: 1; /* flex:1 makes it fill remaining col height */
+}
+
+.why-green-bar {
+  width: 20px;
+  flex-shrink: 0;
+  background: var(--lime);
+  border-radius: 4px;
+  margin-right: 16px;
+  /* align-self: stretch is implicit in a stretch flex container */
+}
+
+.why-offerings ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.why-offerings li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.45;
+}
+
+/* col 3: image fills full col height */
+.why-image {
+  border-radius: 14px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  object-fit: cover;
+}
