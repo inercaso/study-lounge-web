@@ -305,3 +305,50 @@ nav .inner {
   min-height: 160px;
   object-fit: cover;
 }
+
+/* ── STATS ── */
+.stats-section {
+  background: var(--dark);
+}
+
+.stats-section .inner {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-num {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--lime);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.vdivider {
+  width: 1px;
+  height: 50px;
+  background: #3a3a3a;
+  flex-shrink: 0;
+}
+
+.stat-desc {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 280px;
+  text-align: center;
+}
