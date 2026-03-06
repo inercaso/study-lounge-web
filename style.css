@@ -506,3 +506,36 @@ nav .inner {
   letter-spacing: 1px;
   margin-top: 4px;
 }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+}
+
+footer .inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-brand {
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.footer-right {
+  text-align: right;
+  color: #ccc;
+}
+
+.footer-copy {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
