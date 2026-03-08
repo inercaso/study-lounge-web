@@ -539,3 +539,195 @@ footer .inner {
   font-size: 11px;
   color: var(--text-secondary);
 }
+
+/* ── MOBILE EXTRAS ── */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text);
+  line-height: 1;
+}
+
+.mobile-cta-bar {
+  display: none;
+}
+
+/* ── RESPONSIVE: 768px ── */
+@media (max-width: 768px) {
+
+  body {
+    padding-bottom: 72px;
+  }
+
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Nav */
+  nav .inner {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 8px 0 12px;
+    border-top: 1px solid #e8e8e8;
+    margin-top: 8px;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-right {
+    order: 1;
+  }
+
+  .hero-img {
+    order: 2;
+    height: 240px;
+    aspect-ratio: unset;
+    width: 100%;
+  }
+
+  .hero-right h1 {
+    font-size: 34px;
+  }
+
+  /* Why Us */
+  .why-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .why-image {
+    height: 200px;
+    min-height: unset;
+  }
+
+  /* Stats */
+  .stats-section .inner {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .vdivider {
+    display: none;
+  }
+
+  .stat-desc {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Courses */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About */
+  .about-section {
+    padding: 48px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-left h2 {
+    font-size: 30px;
+  }
+
+  .about-left {
+    gap: 16px;
+  }
+
+  .teacher-col {
+    width: 100%;
+    align-items: center;
+  }
+
+  .teacher-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .teacher-info {
+    text-align: center;
+  }
+
+  /* Footer */
+  footer .inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  /* Mobile-only CTA bar */
+  .mobile-cta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 100;
+    gap: 12px;
+  }
+
+  .mobile-cta-bar span {
+    flex: 1;
+  }
+}
+
+/* ── RESPONSIVE: 480px (small phones) ── */
+@media (max-width: 480px) {
+
+  .hero-right h1 {
+    font-size: 28px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
