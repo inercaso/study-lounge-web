@@ -731,3 +731,105 @@ footer .inner {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── MASCOT OLI ── */
+@keyframes mascot-fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mascot-wobble {
+  0%,  100% { transform: rotate(-6deg); }
+  25%       { transform: rotate(6deg);  }
+  50%       { transform: rotate(-3deg); }
+  75%       { transform: rotate(3deg);  }
+}
+
+.mascot-wrapper {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  opacity: 0;
+  animation: mascot-fadein 0.7s ease 2.2s forwards;
+  cursor: pointer;
+}
+
+.mascot-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  animation: mascot-wobble 2.6s ease-in-out 2.9s infinite;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
+}
+
+.mascot-bubble {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: 0;
+  background: #fff;
+  border: 2px solid var(--lime);
+  border-radius: 14px;
+  padding: 10px 14px;
+  width: 210px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.mascot-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  right: 22px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 11px solid var(--lime);
+}
+
+.mascot-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 24px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid #fff;
+  z-index: 1;
+}
+
+.mascot-bubble a {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--lime-dark);
+  text-decoration: none;
+}
+
+.mascot-bubble a:hover {
+  text-decoration: underline;
+}
+
+.mascot-wrapper:hover .mascot-bubble {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .mascot-wrapper {
+    bottom: 86px;
+    right: 16px;
+  }
+
+  .mascot-bubble {
+    width: 180px;
+    font-size: 12px;
+  }
+}
