@@ -12,7 +12,7 @@
 **A modern English language school landing page** — helping students conquer BAC, IELTS, TOEFL, and beyond.
 From primary school kids taking their first English steps, to working professionals pursuing Business English or IELTS certification, the school offers a tailored path for everyone.
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-inercaso.github.io-6366f1?style=for-the-badge&logoColor=white)](https://inercaso.github.io/study-lounge-web/)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-inercaso.github.io-6366f1?style=for-the-badge&logoColor=white)](https://studylounge.vercel.app)
 
 </div>
 
