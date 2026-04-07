@@ -1,0 +1,10 @@
+{
+  "brand": "Study Lounge",
+  "links": [
+    { "text": "Cursuri",    "href": "#cursuri",    "active": true  },
+    { "text": "Teste",      "href": "#cursuri",    "active": false },
+    { "text": "Absolvenți", "href": "#de-ce-noi",  "active": false },
+    { "text": "Despre Noi", "href": "#despre-noi", "active": false },
+    { "text": "Contact",    "href": "#",           "active": false }
+  ]
+}
