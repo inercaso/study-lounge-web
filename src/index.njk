@@ -13,5 +13,38 @@ title: Study Lounge
 </head>
 <body>
 
+<nav>
+  <div class="inner">
+    <div class="brand">
+      <div class="logo-circle"><img src="assets/svg/studylounge.svg" alt="{{ nav.brand }}"></div>
+      {{ nav.brand }}
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    </div>
+    <label for="nav-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      {% for link in nav.links %}
+      <li><a href="{{ link.href }}"{% if link.active %} class="active"{% endif %}>{{ link.text }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="inner">
+    <div class="hero-grid">
+      <img class="hero-img" src="{{ hero.image }}" alt="{{ hero.image_alt }}">
+      <div class="hero-right">
+        <h1>{{ hero.heading_line1 }}<br><span class="hl">{{ hero.heading_highlight }}</span>{{ hero.heading_line2 }}</h1>
+        <p class="tagline">{{ hero.tagline }}</p>
+        <p class="desc">{{ hero.description }}</p>
+        <div class="btn-row">
+          <a href="{{ hero.cta_primary_href }}" class="btn-primary">{{ hero.cta_primary_text }}</a>
+          <a href="{{ hero.cta_secondary_href }}" class="btn-outline">{{ hero.cta_secondary_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
