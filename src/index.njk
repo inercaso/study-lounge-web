@@ -82,5 +82,40 @@ title: Study Lounge
   </div>
 </section>
 
+<section class="stats-section">
+  <div class="inner">
+    <div class="stat-item">
+      <div class="stat-num">{{ stats.stat1_number }}</div>
+      <div class="stat-label">{{ stats.stat1_label }}</div>
+    </div>
+    <div class="vdivider"></div>
+    <div class="stat-item">
+      <div class="stat-num">{{ stats.stat2_number }}</div>
+      <div class="stat-label">{{ stats.stat2_label }}</div>
+    </div>
+    <div class="vdivider"></div>
+    <div class="stat-desc">{{ stats.description }}</div>
+  </div>
+</section>
+
+<section id="cursuri" class="courses-section">
+  <div class="inner">
+    <span class="pill">{{ courses.section_pill }}</span>
+    <h2>{{ courses.section_heading }}</h2>
+    <div class="courses-grid">
+      {% for course in courses.items %}
+      <div class="course-card">
+        <img class="course-img" src="{{ course.image }}" alt="{{ course.image_alt }}">
+        <div class="course-info">
+          <div class="course-tag">{{ course.tag }}</div>
+          <div class="course-name">{{ course.name }}</div>
+          <div class="course-sub">{{ course.subtitle }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
