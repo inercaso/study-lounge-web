@@ -46,5 +46,41 @@ title: Study Lounge
   </div>
 </section>
 
+<section id="de-ce-noi" class="why-section">
+  <div class="inner">
+    <div class="why-layout">
+      <div class="why-left">
+        <div class="why-heading"><span class="why-heading-text">{{ whyus.heading_stats }}</span></div>
+        <div class="why-icons-stack">
+          <div class="bubble">
+            <div class="avatar-icons">
+              <div class="avatar-icon"></div>
+              <div class="avatar-icon"></div>
+              <div class="avatar-icon"></div>
+            </div>
+            {{ whyus.stat_students }}
+          </div>
+          <div class="why-stat-row">
+            <div class="why-logo-float"><img src="assets/svg/studylounge.svg" alt="{{ nav.brand }}"></div>
+            <div class="bubble">{{ whyus.stat_experience }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-offerings">
+        <div class="why-heading"><span class="why-heading-text">{{ whyus.heading_offerings }}</span></div>
+        <div class="why-list-wrap">
+          <div class="why-green-bar"></div>
+          <ul>
+            {% for item in whyus.offerings %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <img class="why-image" src="{{ whyus.image }}" alt="{{ whyus.image_alt }}">
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
