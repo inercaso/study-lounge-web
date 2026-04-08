@@ -1,0 +1,12 @@
+{
+  "section_pill": "Cursuri",
+  "section_heading": "Alege cursul potrivit",
+  "items": [
+    { "name": "Adulți",   "tag": "General",     "subtitle": "Comunică reală",      "image": "assets/img/course-adulti.png",   "image_alt": "Adulți"   },
+    { "name": "Copii",    "tag": "General",     "subtitle": "Baze solide",          "image": "assets/img/course-copii.png",    "image_alt": "Copii"    },
+    { "name": "Business", "tag": "Profesional", "subtitle": "Engleză profesională", "image": "assets/img/course-business.png", "image_alt": "Business" },
+    { "name": "IELTS",    "tag": "Certificare", "subtitle": "Scor mai mare",        "image": "assets/img/course-ielts.png",    "image_alt": "IELTS"    },
+    { "name": "BAC",      "tag": "Examen",      "subtitle": "Examen fără stres",    "image": "assets/img/course-bac.png",      "image_alt": "BAC"      },
+    { "name": "Medicină", "tag": "Specializat", "subtitle": "Limbaj clinic",        "image": "assets/img/course-medicina.png", "image_alt": "Medicină" }
+  ]
+}
