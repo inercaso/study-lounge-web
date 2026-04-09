@@ -117,5 +117,49 @@ title: Study Lounge
   </div>
 </section>
 
+<section id="despre-noi" class="about-section">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>{{ about.heading_plain }}<span class="hl">{{ about.heading_highlight }}</span></h2>
+        <div class="about-text">
+          {{ about.bio_prefix }}<span class="accent-green">{{ about.bio_accent }}</span>{{ about.bio_suffix }}
+        </div>
+      </div>
+      <div class="teacher-col">
+        <img class="teacher-img" src="{{ about.teacher_image }}" alt="{{ about.teacher_name }}">
+        <div class="teacher-info">
+          <div class="teacher-name">{{ about.teacher_name }}</div>
+          <div class="teacher-title">{{ about.teacher_title }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div class="footer-left">
+      <div class="footer-brand">{{ footer.brand }}</div>
+      <div>{{ footer.email }}</div>
+      <div class="footer-copy">{{ footer.copyright }}</div>
+    </div>
+    <div class="footer-right">
+      <div>{{ footer.hours_label }}</div>
+      <div>{{ footer.hours_time }}</div>
+    </div>
+  </div>
+</footer>
+
+<div class="mascot-wrapper">
+  <div class="mascot-bubble">{{ mascot.bubble_text }} <a href="{{ mascot.bubble_link_href }}">{{ mascot.bubble_link_text }}</a></div>
+  <img class="mascot-img" src="{{ mascot.image }}" alt="{{ mascot.image_alt }}">
+</div>
+
+<div class="mobile-cta-bar">
+  <span>{{ mascot.mobile_cta_text }}</span>
+  <a href="{{ mascot.mobile_cta_link_href }}" class="btn-primary">{{ mascot.mobile_cta_link_text }}</a>
+</div>
+
 </body>
 </html>
