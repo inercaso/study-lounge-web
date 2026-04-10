@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: laboratory-tasks-4
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+
+  - name: "nav"
+    label: "Navigare"
+    files:
+      - name: "nav"
+        label: "Linkuri Navigare"
+        file: "src/_data/nav.json"
+        fields:
+          - { label: "Brand", name: "brand", widget: "string" }
+          - label: "Linkuri"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Text",   name: "text",   widget: "string" }
+              - { label: "Href",   name: "href",   widget: "string" }
+              - { label: "Activ?", name: "active", widget: "boolean", default: false }
+
+  - name: "hero"
+    label: "Sectiunea Hero"
+    files:
+      - name: "hero"
+        label: "Hero"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Titlu Rand 1",      name: "heading_line1",      widget: "string" }
+          - { label: "Titlu Marcat",      name: "heading_highlight",  widget: "string" }
+          - { label: "Titlu Rand 2",      name: "heading_line2",      widget: "string" }
+          - { label: "Tagline",           name: "tagline",            widget: "string" }
+          - { label: "Descriere",         name: "description",        widget: "text"   }
+          - { label: "CTA Primar Text",   name: "cta_primary_text",   widget: "string" }
+          - { label: "CTA Primar Link",   name: "cta_primary_href",   widget: "string" }
+          - { label: "CTA Secundar Text", name: "cta_secondary_text", widget: "string" }
+          - { label: "CTA Secundar Link", name: "cta_secondary_href", widget: "string" }
+          - { label: "Imagine",           name: "image",              widget: "image"  }
+          - { label: "Alt Imagine",       name: "image_alt",          widget: "string" }
+
+  - name: "whyus"
+    label: "De Ce Noi"
+    files:
+      - name: "whyus"
+        label: "De Ce Noi"
+        file: "src/_data/whyus.json"
+        fields:
+          - { label: "Titlu Statistici", name: "heading_stats",     widget: "string" }
+          - { label: "Stat Studenti",    name: "stat_students",     widget: "string" }
+          - { label: "Stat Experienta",  name: "stat_experience",   widget: "string" }
+          - { label: "Titlu Oferte",     name: "heading_offerings", widget: "string" }
+          - label: "Lista Oferte"
+            name: "offerings"
+            widget: "list"
+            field: { label: "Oferta", name: "item", widget: "string" }
+          - { label: "Imagine",     name: "image",     widget: "image"  }
+          - { label: "Alt Imagine", name: "image_alt", widget: "string" }
+
+  - name: "stats"
+    label: "Statistici"
+    files:
+      - name: "stats"
+        label: "Statistici"
+        file: "src/_data/stats.json"
+        fields:
+          - { label: "Numar 1",   name: "stat1_number", widget: "string" }
+          - { label: "Label 1",   name: "stat1_label",  widget: "string" }
+          - { label: "Numar 2",   name: "stat2_number", widget: "string" }
+          - { label: "Label 2",   name: "stat2_label",  widget: "string" }
+          - { label: "Descriere", name: "description",  widget: "text"   }
+
+  - name: "courses"
+    label: "Cursuri"
+    files:
+      - name: "courses"
+        label: "Cursuri"
+        file: "src/_data/courses.json"
+        fields:
+          - { label: "Pill Text",      name: "section_pill",    widget: "string" }
+          - { label: "Titlu Sectiune", name: "section_heading", widget: "string" }
+          - label: "Cursuri"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nume",        name: "name",      widget: "string" }
+              - { label: "Tag",         name: "tag",       widget: "string" }
+              - { label: "Subtitlu",    name: "subtitle",  widget: "string" }
+              - { label: "Imagine",     name: "image",     widget: "image"  }
+              - { label: "Alt Imagine", name: "image_alt", widget: "string" }
+
+  - name: "about"
+    label: "Despre Noi"
+    files:
+      - name: "about"
+        label: "Despre Noi"
+        file: "src/_data/about.json"
+        fields:
+          - { label: "Titlu Prefix",     name: "heading_plain",     widget: "string" }
+          - { label: "Titlu Marcat",     name: "heading_highlight",  widget: "string" }
+          - { label: "Bio Prefix",       name: "bio_prefix",         widget: "string" }
+          - { label: "Bio Cuvant Verde", name: "bio_accent",         widget: "string" }
+          - { label: "Bio Rest Text",    name: "bio_suffix",         widget: "text"   }
+          - { label: "Fotografie",       name: "teacher_image",      widget: "image"  }
+          - { label: "Nume Profesor",    name: "teacher_name",       widget: "string" }
+          - { label: "Titlu Profesor",   name: "teacher_title",      widget: "string" }
+
+  - name: "footer"
+    label: "Footer"
+    files:
+      - name: "footer"
+        label: "Footer"
+        file: "src/_data/footer.json"
+        fields:
+          - { label: "Brand",      name: "brand",       widget: "string" }
+          - { label: "Email",      name: "email",       widget: "string" }
+          - { label: "Copyright",  name: "copyright",   widget: "string" }
+          - { label: "Orar Label", name: "hours_label", widget: "string" }
+          - { label: "Orar Ore",   name: "hours_time",  widget: "string" }
+
+  - name: "mascot"
+    label: "Mascota Oli"
+    files:
+      - name: "mascot"
+        label: "Mascota Oli"
+        file: "src/_data/mascot.json"
+        fields:
+          - { label: "Text Bubble",      name: "bubble_text",          widget: "string" }
+          - { label: "Text Link Bubble", name: "bubble_link_text",     widget: "string" }
+          - { label: "Link Bubble Href", name: "bubble_link_href",     widget: "string" }
+          - { label: "Imagine Mascota",  name: "image",                widget: "image"  }
+          - { label: "Alt Imagine",      name: "image_alt",            widget: "string" }
+          - { label: "Mobile CTA Text",  name: "mobile_cta_text",      widget: "string" }
+          - { label: "Mobile CTA Buton", name: "mobile_cta_link_text", widget: "string" }
+          - { label: "Mobile CTA Href",  name: "mobile_cta_link_href", widget: "string" }
