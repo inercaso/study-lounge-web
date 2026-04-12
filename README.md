@@ -12,7 +12,7 @@
 **A modern English language school landing page** — helping students conquer BAC, IELTS, TOEFL, and beyond.
 From primary school kids taking their first English steps, to working professionals pursuing Business English or IELTS certification, the school offers a tailored path for everyone.
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-inercaso.github.io-6366f1?style=for-the-badge&logoColor=white)](https://studylounge.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-studylounge.netlify.app-6366f1?style=for-the-badge&logoColor=white)](https://stalwart-paprenjak-8662af.netlify.app)
 
 </div>
 
@@ -22,9 +22,19 @@ From primary school kids taking their first English steps, to working profession
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Semantic page structure |
+| [11ty (Eleventy)](https://www.11ty.dev/) | Static Site Generator — Nunjucks templates + JSON data pipeline |
+| [Decap CMS](https://decapcms.org/) | Git-based CMS — web UI at `/admin`, commits content to Git |
+| Netlify | Hosting + Identity/Git Gateway for CMS OAuth |
 | Vanilla CSS | All styling — no frameworks |
 | Reset.css | Cross-browser style normalization |
+
+---
+
+## CMS
+
+Content is fully editable through the Decap CMS admin panel at `/admin`. All site sections — hero, courses, why-us, stats, about, footer, and mascot — are managed as JSON data files under `src/_data/`. Changes made in the CMS are committed directly to the Git repository.
+
+**To access the CMS:** visit `https://<site>.netlify.app/admin` and log in with Netlify Identity credentials.
 
 ---
 
@@ -74,12 +84,28 @@ The layout is fully responsive, with the navigation collapsing to a hamburger me
 
 ```
 study-lounge-web/
-├── index.html
+├── .eleventy.js
+├── package.json
+├── netlify.toml
+├── src/
+│   ├── index.njk
+│   ├── admin/
+│   │   ├── index.html
+│   │   └── config.yml
+│   └── _data/
+│       ├── nav.json
+│       ├── hero.json
+│       ├── whyus.json
+│       ├── stats.json
+│       ├── courses.json
+│       ├── about.json
+│       ├── footer.json
+│       └── mascot.json
+├── assets/
+│   ├── img/
+│   └── svg/
 ├── style.css
-├── reset.css
-└── assets/
-    ├── img/
-    └── svg/
+└── reset.css
 ```
 
 ---
